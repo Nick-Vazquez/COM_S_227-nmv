@@ -24,7 +24,7 @@ public class GUIMain
    */
   public static void main(String[] args)
   {
-    Pearls g = new Pearls(ConsoleUI.test8, new PearlUtil());
+    Pearls g = new Pearls(ConsoleUI.test7a, new PearlUtil());
     start(g);
   }
 

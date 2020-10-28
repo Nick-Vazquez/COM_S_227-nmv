@@ -294,11 +294,11 @@ public class PearlUtil
 
           // ('end' stays the same, since the blocks disappeared)
           // TODO - update records, if non-null (Check later!)
+          // Set the previous block to the index of the rightMost movable
+          records[nextMovable].setMovedToIndex(end);
+          records[prev].setMovedToIndex(end);
           records[nextMovable].setDisappeared();
           records[prev].setDisappeared();
-          // Set the previous block to the index of the rightMost movable
-          records[prev].setMovedToIndex(nextMovable);
-
         }
         else 
         {
