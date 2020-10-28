@@ -144,7 +144,7 @@ public class ConsoleUI
 
     public static void main(String[] args)
     {
-      run(test1);
+      run(test5);
     }
     
     public static void run(String[] init) 

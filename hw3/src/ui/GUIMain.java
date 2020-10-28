@@ -24,7 +24,7 @@ public class GUIMain
    */
   public static void main(String[] args)
   {
-    Pearls g = new Pearls(ConsoleUI.test9, new PearlUtil());
+    Pearls g = new Pearls(ConsoleUI.test8, new PearlUtil());
     start(g);
   }
 
@@ -48,7 +48,6 @@ public class GUIMain
    * Initialize GUI components.  This should only be executed on the GUI
    * event thread.
    * @param game
-   * @param sleepTime
    */
   private static void createAndShow(final Pearls game)
   {

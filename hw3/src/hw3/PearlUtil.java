@@ -45,7 +45,8 @@ public class PearlUtil
       {
         states[i] = (EMPTY);
         
-        // TODO - update records, if non-null
+        // TODO - update records, if non-null (Check Later!)
+        records[i].setDisappeared();
       }
     }
   }
@@ -197,11 +198,13 @@ public class PearlUtil
     {
       if (states[i] == State.OPEN_GATE)
       {
-        states[i] = (State.CLOSED_GATE);        
+        states[i] = (State.CLOSED_GATE);
+        records[i].setClosed();
       }
     }
 
-    // TODO - update records, if non-null
+    // TODO - update records, if non-null (Check later!)
+    records[0].setMovedToIndex(end);
     
     return end;
   }
@@ -290,8 +293,11 @@ public class PearlUtil
           states[prev] = (State.EMPTY);
 
           // ('end' stays the same, since the blocks disappeared)
-          
-          // TODO - update records, if non-null
+          // TODO - update records, if non-null (Check later!)
+          records[nextMovable].setDisappeared();
+          records[prev].setDisappeared();
+          // Set the previous block to the index of the rightMost movable
+          records[prev].setMovedToIndex(nextMovable);
 
         }
         else 
@@ -307,7 +313,8 @@ public class PearlUtil
             states[end] = states[nextMovable];
             states[nextMovable] = (State.EMPTY);
 
-            // TODO - update records, if non-null
+            // TODO - update records, if non-null (Check later!)
+            records[nextMovable].setMovedToIndex(end);
           }
 
           // now 'end' shifts to left, since we put a movable block there
