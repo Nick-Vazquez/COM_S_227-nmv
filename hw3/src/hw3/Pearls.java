@@ -6,7 +6,7 @@ import java.util.ArrayList;
 /**
  * Basic game state and operations for a the puzzle game "Pearls", which
  * is a simplified version of "Quell".
- * @author smkautz
+ * @author smkautz, nmv
  */
 public class Pearls
 {

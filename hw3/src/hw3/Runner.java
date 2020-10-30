@@ -12,8 +12,7 @@ public class Runner
             SwingUtilities.invokeLater(new Runnable() {
                 public void run() {
                     SpecCheck.testAndZip(SpecChecker.class, "SUBMIT_THIS_hw3", "hw3",
-                            new String[]{"src/hw3/hw3.Pearls.java","src/hw3/hw3.PearlUtil.java"});
-
+                            "hw3/src/hw3/Pearls.java","hw3/src/hw3/PearlUtil.java");
                 }
             });
         }

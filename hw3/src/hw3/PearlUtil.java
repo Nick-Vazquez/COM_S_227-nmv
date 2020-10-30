@@ -14,6 +14,7 @@ import api.State;
 /**
  * Utility class containing the key algorithms for moves in the
  * Pearls game.  This class is completely stateless.
+ * Authors: smkautz, nmv
  */
 public class PearlUtil
 {
@@ -44,8 +45,7 @@ public class PearlUtil
       if (states[i] == PEARL)
       {
         states[i] = (EMPTY);
-        
-        // TODO - update records, if non-null (Check Later!)
+        // Set the record to note that a pearl disappeared
         records[i].setDisappeared();
       }
     }
@@ -202,8 +202,7 @@ public class PearlUtil
         records[i].setClosed();
       }
     }
-
-    // TODO - update records, if non-null (Check later!)
+    //
     records[0].setMovedToIndex(end);
     
     return end;
@@ -293,7 +292,6 @@ public class PearlUtil
           states[prev] = (State.EMPTY);
 
           // ('end' stays the same, since the blocks disappeared)
-          // TODO - update records, if non-null (Check later!)
           // Set the previous block to the index of the rightMost movable
           records[nextMovable].setMovedToIndex(end);
           records[prev].setMovedToIndex(end);
@@ -313,7 +311,7 @@ public class PearlUtil
             states[end] = states[nextMovable];
             states[nextMovable] = (State.EMPTY);
 
-            // TODO - update records, if non-null (Check later!)
+            // Update the cell record
             records[nextMovable].setMovedToIndex(end);
           }
 
